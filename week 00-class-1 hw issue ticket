@@ -1,0 +1,49 @@
+week 00 hw issue ticket
+## 🚀 Completion looks like:
+You have answered the following questions in your issue ticket:
+
+
+1. What types of HTML elements are in this page? Which of these are new to you?
+
+Familiar
+-links to stylesheets
+-tags: title, header, ul/li, header, h1-6, a, span, div
+-property: class
+New:
+-enclosing page in <html>
+-tags: meta, footer, i
+-property: id
+
+2. Find where the stylesheets are linked. There are two of them. `style.css` has all of our styles in it, but what does `reset.css` do? Try taking out `reset.css`. Then try putting `reset.css` above `style.css`.
+
+reset.css clears out default styles. Removing it showed a different font weight on some of the heading elements, extra padding or margin around text and other divs, including the footer, and bullets on the list items.
+
+Putting it above style.css affects most of the fonts. This is sort of confusing to me, becuase I would assume as the page cascades down, the reset css would be overridden by the style css below. 
+
+3. Find the div with class `clearfix` and remove it from the page. What happens? What's in the css in that style rule?
+
+removing clearfix messed up the formatting near the bottom, after the skills lists and before the links to project pages. displaying the previous section as block appears to be what's going on here, seems like it's preventing the following section from flowing inline with the rest of the text above.
+
+4. How are the images under recent projects included?
+
+the image handling rules are set on the "project" class, which is applied to the div in which all of the project's content is held. and the images themselves are a SEPARATE class (each), with only the url element applied to that class. My guess is because this saves duplicating the rest of the css that is going to be repeated on other divs.
+
+5. When does the profile picture show up? How is that managed?
+
+it's positioned absolutely on the page, and appears when you hover on the header element. there's an ease-in animation so it fades in gently. I'm surprised the ease in is handled on the self ID instead of the hover.
+
+6. Write four questions of your own about the code here.
+
+1. I definitely want to know the difference between class and ID, and when to use them,
+2. I still don't fully understand what clearfix IS, why wouldn't you just display the div as "block" for example
+3. On the profile pic, Why is the ease-in animation handled on the self id itself rather than the hover?
+4. How does the browser know which css file to prioritize? 
+
+
+## 🚀 Your homework submission should include:
+
+- An [issue ticket](https://github.com/ga-students/FEWD-NYC-1.17.18/issues/new) created on _this repo_.
+- Your issue ticket contains answers to the questions above.
+- Completion, comfort, wins, losses, questions.
+
+## This homework is due 🚨 4PM ON MONDAY 1/22 🚨
